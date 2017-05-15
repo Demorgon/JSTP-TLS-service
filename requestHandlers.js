@@ -5,25 +5,14 @@ const formidable = require("formidable");
 function start(response) {
     console.log("Request handler 'start' was called.");
 
-    var body = '<html>' +
-        '<head>' +
-        '<meta http-equiv="Content-Type" ' +
-        'content="text/html; charset=UTF-8" />' +
-        '</head>' +
-        '<body>' +
-        '<form action="/upload" enctype="multipart/form-data" ' +
-        'method="post">' +
-        '<input type="file" name="upload">' +
-        '<input type="submit" value="Upload file" />' +
-        '</form>' +
-        '</body>' +
-        '</html>';
 
+    var body = fs.readFileSync('./public/index.html', 'utf8')
     response.writeHead(200, {
         "Content-Type": "text/html"
     });
     response.write(body);
     response.end();
+
 }
 
 
@@ -34,19 +23,17 @@ function upload(response, request) {
     console.log("about to parse");
     form.parse(request, function (error, fields, files) {
         console.log("parsing done");
-
-        fs.rename(files.upload.path, "./tmp/test.png", function (err) {
-            if (err) {
+        var oldpath = files.upload.path;
+        var newpath = './uploads/' + files.upload.name;
+        fs.rename(oldpath, newpath, function (error) {
+            if (error) {
                 fs.unlink("./tmp/test.png");
                 fs.rename(files.upload.path, "./tmp/test.png");
+            } else {
+                response.write('File uploaded and moved!');
+                response.end();
             }
         });
-        response.writeHead(200, {
-            "Content-Type": "text/html"
-        });
-        response.write("received image:<br/>");
-        response.write("<img src='/show' />");
-        response.end();
     });
 }
 
