@@ -72,46 +72,14 @@ function download(response, request) {
                     throw error;
                 } else {
                     response.setHeader('Content-disposition', 'attachment; filename="' + fileName + '"');
-                    var filestream = fs.createReadStream(file);
-                    filestream.pipe(response);
-                    //                    response.write(file);
-                    //                    response.end();
+//                    var filestream = fs.createReadStream(file);
+//                    filestream.pipe(response);
+                                        response.write(file);
+                                        response.end();
                 }
             });
         }
     });
-
-
-
-    //    fs.readFile(path + items[i], function (error, file) {
-    //                    if (error) {
-    //                        throw error;
-    //                    } else {
-    //                        response.setHeader('Content-disposition', 'attachment; filename="' + items[i] + '"');
-    //                        response.write('' + file.path);
-    //                        response.end();
-    //                    }
-    //                });
-    //    
-
-
-
-
-
-    //    fs.readFile(path, "binary", function (error, file) {
-    //        if (error) {
-    //            response.writeHead(500, {
-    //                "Content-Type": "text/plain"
-    //            });
-    //            response.write(error + "\n");
-    //            response.end();
-    //        } else {
-    //            response.setHeader('Content-disposition', 'attachment; filename=111.txt');
-    //            var filestream = fs.createReadStream(file);
-    //            filestream.pipe(response);
-    //
-    //        }
-    //    });
 }
 
 function keygen() {
