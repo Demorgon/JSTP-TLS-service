@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #dedede;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        form {
+            display: none;
+        }
+        
+        h1 {
+            font-size: 200px;
+            font-weight: 100;
+            text-shadow: 5px 0px 0px rgb(102, 114, 212);
+            color: #ffffff;
+        }
+        
+        p {
+            font-size: 24px;
+            font-weight: 400;
+            color: #acacac;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+                
+        .card_wrapper {
+            width: 500px;
+            height: auto;
+            background-color: aliceblue;
+            border-radius: 12px;
+            box-shadow: 0px 5px 5px rgba(41, 41, 41, 0.10);
+            padding-bottom: 20px;
+        }
+        
+        .centered {
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        
+        .horizontal {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        
+        .logo {
+            width: 500px;
+            height: 300px;
+        }
+        
+        .text_container {
+            width: 100%;
+            height: auto;
+            align-items: flex-start;
+            text-align: center;
+            padding: 0 10%;
+        }
+        
+        .text_block {
+            width: 100%;
+            height: 35%;
+            margin: 10px 0%;
+        }
+        
+        img {
+            height: 80%;
+        }
+        
+        .grey {
+            color: #acacac;
+            transition: 0.5s;
+        }
+        
+        .red {
+            color: rgb(209, 72, 72);
+        }
+        .overflow{
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body class="centered">
+    <div class="card_wrapper centered">
+        <form action="/ghj2y5u6io" enctype="multipart/form-data" method="post">
+            <input type="file" name="upload" id="upload">
+            <input type="submit" value="Upload" id="sumbit">
+        </form>
+        <div class="logo centered">
+            <img src="https://lh5.googleusercontent.com/wBqEY6RUol9spgPSyHwt4zWtDN6Ot1D2nErEk2hiRU-JGnjq8pstERW9Ndp7rd-i1rcgH_lXl3cjGU4=w1440-h792" alt="Uploaded!">
+        </div>
+        <div class="text_container centered">
+            <div class="text_block centered">
+                <p>Your file is available here:</p>
+            </div>
+            <div class="text_block centered overflow">
+                <p class="red">https://localhost:8888/download?9999999999</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

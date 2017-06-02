@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700,900" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            background-color: #dedede;
+            width: 100%;
+            height: 100vh;
+            font-family: 'Roboto', sans-serif;
+        }
+        
+        form {
+            background-color: transparent;
+            display: none;
+        }
+        
+        h1 {
+            font-size: 200px;
+            font-weight: 100;
+            text-shadow: 5px 0px 0px rgb(102, 114, 212);
+            color: #ffffff;
+        }
+        
+        p {
+            font-size: 24px;
+            font-weight: 400;
+            color: #acacac;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        p:hover {
+            color: rgb(209, 72, 72);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        .card_wrapper {
+            width: 500px;
+            height: 400px;
+            background-color: aliceblue;
+            border-radius: 12px;
+            box-shadow: 0px 5px 5px rgba(41, 41, 41, 0.10);
+        }
+        
+        .centered {
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -ms-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        
+        .horizontal {
+            -webkit-box-orient: horizontal;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+            flex-direction: row;
+        }
+        
+        .logo {
+            width: 500px;
+            height: 300px;
+        }
+        
+        .buttons_container {
+            width: 100%;
+            height: 100px;
+            align-items: flex-start;
+        }
+        
+        .button_block {
+            width: 30%;
+            height: 35%;
+            margin: 5%;
+            border: 1px solid rgba(209, 72, 72, 0);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        
+        .button_block:hover {
+            border: 1px solid rgb(209, 72, 72);
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            border-radius: 2px;
+        }
+        
+        #upload {
+            display: none;
+        }
+        
+        #sumbit {
+            outline: none;
+            border: 1px solid rgba(133, 122, 214, 0);
+            border-radius: 15px;
+            height: 25px;
+            width: 100px;
+            background-color: transparent;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        #sumbit:hover {
+            border: 1px solid rgb(133, 122, 214);
+            border-radius: 2px;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+        }
+        
+        img {
+            height: 80%;
+        }
+    </style>
+</head>
+
+<body class="centered">
+    <div class="card_wrapper centered">
+        <form action="/ghj2y5u6io" enctype="multipart/form-data" method="post">
+            <input type="file" name="upload" id="upload">
+            <input type="submit" value="Upload" id="sumbit">
+        </form>
+        <div class="logo centered">
+            <img src="https://lh5.googleusercontent.com/0GghECmtbKeOVyMjFHB7bqsk0bjAvbjivlDAxKpDmzrSsBmcOvIogBZdyGzY3hhxCQxK8lzJ4Ircq6M=w1440-h792" alt="upload">
+        </div>
+        <div class="buttons_container centered horizontal">
+            <div class="button_block centered" id="upload_label" onclick="document.getElementById('upload').click();">
+                <p>SELECT FILE</p>
+            </div>
+            <div class="button_block centered" id="download_label" onclick="document.getElementById('sumbit').click();">
+                <p>UPLOAD</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
